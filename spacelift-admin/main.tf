@@ -79,7 +79,7 @@ resource "spacelift_stack_dependency_reference" "ansible-ec2-output" {
 resource "spacelift_context" "ansible-context" {
   description = "Context for Terraform-Ansible workflow"
   name        = "Ansible context"
-  space_id    = "stack-dependencies-demo-01HES50MW0R4XW1AME0BPP8YVY"
+  space_id    = "root"
   labels      = ["autoattach:ansible"]
 }
 

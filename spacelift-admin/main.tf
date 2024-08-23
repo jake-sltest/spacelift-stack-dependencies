@@ -8,7 +8,7 @@ resource "spacelift_stack" "vpc-stack" {
   labels                       = ["sd-demo"]
   name                         = "01-vpc-stack"
   project_root                 = "/terraform/vpc"
-  repository                   = "stack-dependencies"
+  repository                   = "spacelift-stack-dependencies"
   enable_local_preview         = true
   terraform_smart_sanitization = false
   autodeploy                   = true
@@ -22,7 +22,7 @@ resource "spacelift_stack" "ec2-stack" {
   labels                       = ["sd-demo", "ansible"]
   name                         = "02-ec2-stack"
   project_root                 = "/terraform/instances"
-  repository                   = "stack-dependencies"
+  repository                   = "spacelift-stack-dependencies"
   enable_local_preview         = true
   terraform_smart_sanitization = true
   autodeploy                   = true
@@ -39,7 +39,7 @@ resource "spacelift_stack" "ansible-stack" {
   labels                       = ["sd-demo", "ansible"]
   name                         = "03-ansible-stack"
   project_root                 = "/ansible"
-  repository                   = "stack-dependencies"
+  repository                   = "spacelift-stack-dependencies"
   enable_local_preview         = true
   terraform_smart_sanitization = true
   autodeploy                   = true

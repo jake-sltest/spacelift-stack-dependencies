@@ -1,6 +1,6 @@
 resource "spacelift_space" "new-project-admin" {
   name = var.project_name
-  parent_space_id = "root"
+  parent_space_id = "argo-demo-01HTN60KD33DFA0JPZJE5ZYSVC"
   inherit_entities = true
 }
 

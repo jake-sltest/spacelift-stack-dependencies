@@ -26,16 +26,3 @@ resource "spacelift_space" "new-project-prod" {
   description = "This a child of the root space. It contains all the resources common to the development infrastructure."
   inherit_entities = true
 }
-
-resource "spacelift_stack" "main-stack" {
-  administrative               = true
-  space_id                     = spacelift_space.new-project-admin.id
-  branch                       = "main"
-  description                  = "This stack manages the new project space"
-  name                         = "main-stack"
-  project_root                 = "/terraform/vpc"
-  repository                   = "spacelift-stack-dependencies"
-  enable_local_preview         = true
-  terraform_smart_sanitization = false
-  autodeploy                   = true
-}

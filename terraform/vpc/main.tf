@@ -18,7 +18,7 @@ resource "aws_subnet" "sd_subnet" {
 
 resource "aws_instance" "sd_instance" {
   ami           = "ami-04a81a99f5ec58529"
-  instance_type = "var.instance_size"
+  instance_type = var.instance_size
   subnet_id = aws_subnet.sd_subnet.id
   associate_public_ip_address = true
 

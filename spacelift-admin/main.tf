@@ -34,3 +34,11 @@ resource "spacelift_stack" "main-stack" {
   terraform_smart_sanitization = false
   autodeploy                   = true
 }
+
+resource "spacelift_idp_group_mapping" "spacelift" {
+  name = "spacelift"
+  policy {
+    space_id = spacelift_space.new-project-admin.id
+    role     = "ADMIN"
+  }
+}

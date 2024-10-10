@@ -35,8 +35,8 @@ resource "spacelift_stack" "main-stack" {
   autodeploy                   = true
 }
 
-resource "spacelift_idp_group_mapping" "spacelift" {
-  name = "spacelift"
+resource "spacelift_idp_group_mapping" "main" {
+  name = "main"
   policy {
     space_id = spacelift_space.new-project-admin.id
     role     = "ADMIN"
